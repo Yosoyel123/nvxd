@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Novia</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        body {
+            background-color: pink;
+         
+        }
+        @media (max-width: 480px){
+            body {
+            background-color: rgb(185, 40, 154);
+            width: 350px;
+            height: 270px;
+        }
+} 
+        @media (min-width: 480px){
+            body {
+            background-color: rgb(17, 179, 165);
+            width: 500px;
+            height: 400px;
+        }
+} 
+        h3 {
+            color: rgb(9, 4, 37);
+        font-size: 25px;
+        }
+        h4 {
+            color: rgb(129, 8, 8);
+        font-size: 25px;
+        }   h5 {
+            color: rgb(80, 12, 52);
+        font-size: 25px;
+        }
+        .cua{
+           
+            background-image:  url('img/goz.jfif');
+    background-repeat: no-repeat;
+    width: 250px;
+            height: 130px;
+            background-size: 100% 100%;
+        }
+    </style>
+    <script>
+        function accionParaCuandoEllaDigaQueSi(){
+            document.getElementById("demo1").innerHTML= `ohhh escogiste "SI" `
+            document.getElementById("demo2").innerHTML= `YA SOMOS NOVIOS <br>  <img src="img/cerdo.jfif" width="200">` 
+        }
+
+        function mueveElBoton(){
+            width = window.innerWidth;
+            height = window.innerHeight;
+
+            newWidth = (Math.random() * width);
+            newHeight = (Math.random() * height);
+
+            document.getElementById('btnNo').style.position = "absolute";
+            document.getElementById('btnNo').style.left = newWidth + "px";
+            document.getElementById('btnNo').style.top = newHeight + "px";
+            
+
+        }
+    </script>
+</head>
+<body><center>
+    
+    <div class="cua">
+        <h3>¿Quieres ser mi novia?</h3>
+    <input type="button" onclick="accionParaCuandoEllaDigaQueSi()" id="btnSi" value="Si" />
+    <input type="button" id="btnNo" onmouseover="mueveElBoton()" value="No" />
+</div>
+    <h4 id="demo1"></h4>
+    <h5 id="demo2"></h5>
+
+</center>
+</body>
+</html
